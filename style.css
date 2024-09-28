@@ -81,6 +81,8 @@ main {
 .time-heading {
     color: hsl(332, 51%, 32%);
     margin-left: 1rem;
+    font-weight: 700;
+    font-size: 1.18rem;
 }
 
 .time-list {
