@@ -1,11 +1,12 @@
-*, *::before, *::after {
+/* General Reset */
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-}
-
-* {
     margin: 0;
 }
 
+/* Font Import */
 @font-face {
     font-family: "YoungSerif";
     src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf) format("truetype");
@@ -16,53 +17,65 @@
     src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format("truetype");
 }
 
+/* Body */
 body {
     font-family: "Outfit";
     background: hsl(30, 54%, 90%);
-    height: 175vh;
+    min-height: 150vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    line-height: calc(1em + 0.5rem);
+    line-height: 1.5rem;
     -webkit-font-smoothing: antialiased;
 }
 
+/* Headings */
 h1, h2 {
     font-family: "YoungSerif";
     font-weight: 400;
+    line-height: 2.5rem;
 }
 
+/* Main Content */
 main {
     background: hsl(0, 0%, 100%);
     max-width: 45rem;
-    padding: 2rem;
+    padding: 2rem 2rem;
     border-radius: 1rem;
 }
 
+/* Images */
 .article-image {
-    width: 100%;
+    max-width: 100%;
     border-radius: 1rem;
 }
 
+/* Heading */
 .heading {
     color: hsl(24, 5%, 18%);
     font-size: 2.5rem;
     margin-top: 2.5rem;
 }
 
+/* Description */
 .description {
     color: hsl(30, 10%, 34%);
     margin: 1.5rem 0;
 }
 
+/* Time Block */
 .time-block {
     background: hsl(330, 100%, 98%);
-    padding: 1.25rem;
+    padding: 1.5rem 0.75rem;
     border-radius: 0.75rem;
 }
 
+.time-block ul {
+    padding-left: 2.3rem;
+}
+
 .time-block li::marker {
-    color: hsl(332, 51%, 32%);;
+    color: hsl(332, 51%, 32%);
 }
 
 .time-heading {
@@ -74,26 +87,38 @@ main {
     color: hsl(30, 10%, 34%);
 }
 
-.ingredient-heading, .instruction-heading, .nutrition-heading {
+/* Section Headings */
+.ingredient-heading,
+.instruction-heading,
+.nutrition-heading {
     margin-top: 2rem;
     margin-bottom: 1.25rem;
     font-size: 1.75rem;
     color: hsl(14, 45%, 36%);
 }
 
-.ingredient-list, .instruction-list, .nutrition-item, .nutrition-desc {
+/* Lists */
+.ingredient-list,
+.instruction-list,
+.nutrition-item,
+.nutrition-desc {
     color: hsl(30, 10%, 34%);
 }
 
-.ingredient-block li::marker, .instruction-block li::marker, .nutrition-element {
+.ingredient-block li::marker,
+.instruction-block li::marker,
+.nutrition-element {
     color: hsl(14, 45%, 36%);
     font-weight: 700;
 }
 
-.ingredient-block, .instruction-block {
+/* Block Margins */
+.ingredient-block,
+.instruction-block {
     margin-bottom: 2rem;
 }
 
+/* Nutrition Section */
 .nutrition-desc {
     margin-bottom: 0.5rem;
 }
@@ -109,8 +134,13 @@ main {
 }
 
 .nutrition-element {
-    width: 6.25rem;
+    width: 50%;
     text-align: left;
+}
+
+/* Lists General */
+ul, ol {
+    padding-left: 1.5rem;
 }
 
 li {
@@ -126,6 +156,7 @@ ul li::marker {
     font-size: 0.75em;
 }
 
+/* Horizontal Rule */
 hr {
     border-color: hsla(30, 18%, 87%, 0.255);
 }
